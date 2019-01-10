@@ -32,14 +32,6 @@ import org.apache.hadoop.util.GenericOptionsParser;
 				String str = date_from+","+date_to+","+profit_margin_percent+","+net_operating_income;
 				System.err.println(str);
 				System.out.println(str);
-
-				/*
-	            JSONObject obj = new JSONObject();
-	            obj.put("date_from", date_from);
-	            obj.put("date_to", date_to );
-	            obj.put("profit_margin_percent", profit_margin_percent);
-	            obj.put("net_operating_income", net_operating_income);
-	            */
 	            
 	            context.write(new Text(orgno), new Text("B"+str));
        		}
@@ -74,14 +66,6 @@ import org.apache.hadoop.util.GenericOptionsParser;
 				String sni_text = fields[4];
 				String str = orgno+","+company_name+","+phone_number+","+sni_code+","+sni_text+",";
 				
-				/*
-	            JSONObject obj = new JSONObject();
-	            obj.put("company_name", company_name);
-	            obj.put("phone_number", phone_number);
-	            obj.put("sni_code", sni_code);
-	            obj.put("sni_text", sni_text);
-	            */
-	            
 	            context.write(new Text(orgno), new Text("A"+str));
 	        }
 		 }
@@ -94,14 +78,9 @@ import org.apache.hadoop.util.GenericOptionsParser;
 
 		 public void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException 
 		 {
-
-
-		 	// Clear our lists
 			listA.clear();
 			listB.clear();
 
-			// iterate through all our values, binning each record based on what
-			// it was tagged with make sure to remove the tag!
 			for (Text t : values) {
 				if (t.charAt(0) == 'A') {
 					listA.add(new Text(t.toString().substring(1)));
@@ -111,15 +90,12 @@ import org.apache.hadoop.util.GenericOptionsParser;
 			}
 
 			// LEFT INNER JOIN, companies with accounts
-			// For each entry in A,
 			for (Text A : listA) {
-				// If list B is not empty, join A and B
 				if (!listB.isEmpty()) {
 					for (Text B : listB) {
 						context.write(A, B);
 					}
 				} else {
-					// Else, output A by itself
 					context.write(A, new Text(""));
 				}
 			}
@@ -129,10 +105,10 @@ import org.apache.hadoop.util.GenericOptionsParser;
 	 public static void main(String[] args) throws Exception {
 		Configuration conf = new Configuration();
 		
-		/*if (args.length != 3) {
+		if (args.length != 3) {
 			System.err.println("Usage: ReduceSideJoin <account data> <company data> <out>");
 			System.exit(1);
-		}*/
+		}
 
 		Job job = new Job(conf, "Reduce side join");
 		job.setJarByClass(ReduceJoin.class);
@@ -146,7 +122,7 @@ import org.apache.hadoop.util.GenericOptionsParser;
 		Path outputPath = new Path(args[2]);
 
 		FileOutputFormat.setOutputPath(job, outputPath);
-		//outputPath.getFileSystem(conf).delete(outputPath);
+		outputPath.getFileSystem(conf).delete(outputPath);
 		System.exit(job.waitForCompletion(true) ? 0 : 1);
 	 }
  }
