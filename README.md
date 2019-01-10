@@ -24,28 +24,28 @@ Compile and Run
 ---------------------
 
 #### JOINING PART
-#Copy input from local directory
+**#Copy input from local directory**  
 bin/hdfs dfs -put /home/rabiul/Desktop/GoavaTestPro/input /user/hduser/input
 bin/hdfs dfs -put /home/rabiul/Desktop/GoavaTestPro/json-20180813.jar /user/hduser [for run time use of json.org.*]
 
-#Compile
+**#Compile**  
 /home/rabiul/Desktop/GoavaTestPro$ javac -classpath $HADOOP_HOME/share/hadoop/common/hadoop-common-2.9.0.jar:$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.9.0.jar:$HADOOP_HOME/share/hadoop/common/lib/commons-cli-1.2.jar:/home/rabiul/Desktop/json-20180813.jar -d /home/rabiul/Desktop/GoavaTestPro ReduceJoin.java
 
-#Convert into jar file 
+**#Convert into jar file**   
 /home/rabiul/Desktop/GoavaTestPro$ jar -cvf reducejoinj.jar -C /home/rabiul/Desktop/GoavaTestPro/reducejoinc .
 
-#Run JAR file
+**#Run JAR file**  
 /usr/local/hadoop$ bin/hadoop jar /home/rabiul/Desktop/GoavaTestPro/reducejoinj.jar ReduceJoin input/accounts.csv input/companies.csv initoutput
 
 
 #### COMBINATION PART
-#Compile
+**#Compile**  
 /home/rabiul/Desktop/GoavaTestPro$ javac -classpath $HADOOP_HOME/share/hadoop/common/hadoop-common-2.9.0.jar:$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.9.0.jar:$HADOOP_HOME/share/hadoop/common/lib/commons-cli-1.2.jar:/home/rabiul/Desktop/json-20180813.jar -d /home/rabiul/Desktop/GoavaTestPro CompAccounts.java
 
-#Convert into jar file
+**#Convert into jar file**   
 /home/rabiul/Desktop/GoavaTestPro$ jar -cvf compaccountsj.jar -C /home/rabiul/Desktop/GoavaTestPro/compaccountsc .
 
-#Run JAR file
+**#Run JAR file**  
 bin/hadoop jar /home/rabiul/Desktop/GoavaTestPro/compaccountsj.jar CompAccounts initoutput finoutput
 
 
