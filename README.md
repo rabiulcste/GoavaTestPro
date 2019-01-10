@@ -17,13 +17,13 @@ Joining + Combination + MultipleOutput
 - *bin/hdfs dfs -put /home/rabiul/Desktop/GoavaTestPro/json-20180813.jar /user/hduser // for run time use of json.org.* *
 
 **#Compile**  
-- */home/rabiul/Desktop/GoavaTestPro$ javac -classpath $HADOOP_HOME/share/hadoop/common/hadoop-common-2.9.0.jar:$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.9.0.jar:$HADOOP_HOME/share/hadoop/common/lib/commons-cli-1.2.jar:/home/rabiul/Desktop/json-20180813.jar -d /home/rabiul/Desktop/GoavaTestPro <path/to/java/file>*
+- */home/rabiul/Desktop/GoavaTestPro$ javac -classpath $HADOOP_HOME/share/hadoop/common/hadoop-common-2.9.0.jar:$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.9.0.jar:$HADOOP_HOME/share/hadoop/common/lib/commons-cli-1.2.jar:/home/rabiul/Desktop/json-20180813.jar -d  **<path/to/java/file>***
 
 **#Convert into jar file**   
-- */home/rabiul/Desktop/GoavaTestPro$ jar -cvf <path/to/jar/file> -C /home/rabiul/Desktop/GoavaTestPro/<path/to/class/dir> .*
+- */home/rabiul/Desktop/GoavaTestPro$ jar -cvf <path/to/jar/file> -C **<path/to/classfiles/dir>** .*
 
 **#Run JAR file**  
-- */usr/local/hadoop$ bin/hadoop jar /home/rabiul/Desktop/GoavaTestPro/<path/to/jar/file> <programe/name> <input> <output>*
+- */usr/local/hadoop$ bin/hadoop jar **<path/to/jar/file>** <Program/Name> <input> <output>*
 
 
 
