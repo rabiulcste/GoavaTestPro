@@ -20,7 +20,7 @@ Joining + Combination + MultipleOutput
 - */home/rabiul/Desktop/GoavaTestPro$ javac -classpath $HADOOP_HOME/share/hadoop/common/hadoop-common-2.9.0.jar:$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.9.0.jar:$HADOOP_HOME/share/hadoop/common/lib/commons-cli-1.2.jar:/home/rabiul/Desktop/json-20180813.jar -d  **<path/to/java/file>***
 
 **#Convert into jar file**   
-- */home/rabiul/Desktop/GoavaTestPro$ jar -cvf <path/to/jar/file> -C **<path/to/classfiles/dir>** .*
+- */home/rabiul/Desktop/GoavaTestPro$ jar -cvf **<path/to/jar/file>** -C **<path/to/classfiles/dir>** .*
 
 **#Run JAR file**  
 - */usr/local/hadoop$ bin/hadoop jar **<path/to/jar/file>** <Program/Name> <input> <output>*
