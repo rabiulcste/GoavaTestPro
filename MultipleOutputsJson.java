@@ -24,22 +24,21 @@ public class MultipleOutputsJson extends Configured implements Tool
     public static class MultipleOutputsMapper extends Mapper<LongWritable, Text, Text, Text> 
 	{			
 		public void map(LongWritable mkey, Text mvalue, Context context) throws IOException, InterruptedException
-                {
-					try
-					{
-		               JSONObject jsonObj = new JSONObject(mvalue.toString());
-			           
-			           //parse the input data with JSONObject	
-		               String orgno = (String)jsonObj.get("orgno");
+        {
+			try
+			{
+				JSONObject jsonObj = new JSONObject(mvalue.toString());
 
-		               //emitting directory structure as key and input record as value.
-		               context.write(new Text(orgno), new Text(mvalue.toString()));	          			    
-                    }
-                    catch (Exception e) {
-						e.printStackTrace();
-					}
-		     }
+				//parse the input data with JSONObject	
+				String orgno = (String)jsonObj.get("orgno");
+
+				//emitting directory structure as key and input record as value.
+				context.write(new Text(orgno), new Text(mvalue.toString()));	          			    
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
+	}
 				
 	public static class MultipleOutputsReducer extends Reducer<Text, Text ,NullWritable, Text> 
 	{			
