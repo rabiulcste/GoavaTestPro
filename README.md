@@ -23,7 +23,7 @@ Related accounts data in an array property inside company object -> CompAccounts
 Compile and Run
 ---------------------
 
-JOINING PART
+#### JOINING PART
 #Copy input from local directory
 bin/hdfs dfs -put /home/rabiul/Desktop/GoavaTestPro/input /user/hduser/input
 bin/hdfs dfs -put /home/rabiul/Desktop/GoavaTestPro/json-20180813.jar /user/hduser [for run time use of json.org.*]
@@ -38,7 +38,7 @@ bin/hdfs dfs -put /home/rabiul/Desktop/GoavaTestPro/json-20180813.jar /user/hdus
 /usr/local/hadoop$ bin/hadoop jar /home/rabiul/Desktop/GoavaTestPro/reducejoinj.jar ReduceJoin input/accounts.csv input/companies.csv initoutput
 
 
-COMBINATION PART
+#### COMBINATION PART
 #Compile
 /home/rabiul/Desktop/GoavaTestPro$ javac -classpath $HADOOP_HOME/share/hadoop/common/hadoop-common-2.9.0.jar:$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.9.0.jar:$HADOOP_HOME/share/hadoop/common/lib/commons-cli-1.2.jar:/home/rabiul/Desktop/json-20180813.jar -d /home/rabiul/Desktop/GoavaTestPro CompAccounts.java
 
