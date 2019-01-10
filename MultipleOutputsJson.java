@@ -24,7 +24,7 @@ public class MultipleOutputsJson extends Configured implements Tool
     public static class MultipleOutputsMapper extends Mapper<LongWritable, Text, Text, Text> 
 	{			
 		public void map(LongWritable mkey, Text mvalue, Context context) throws IOException, InterruptedException
-        {
+		{
 			try
 			{
 				JSONObject jsonObj = new JSONObject(mvalue.toString());
@@ -37,7 +37,7 @@ public class MultipleOutputsJson extends Configured implements Tool
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}
+		}	
 	}
 				
 	public static class MultipleOutputsReducer extends Reducer<Text, Text ,NullWritable, Text> 
