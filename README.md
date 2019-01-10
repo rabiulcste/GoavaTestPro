@@ -11,7 +11,7 @@ Multiple output generation -> MultipleOutputsJson.java
 
 Compile and Run
 ---------------------
-JOINING + COMBINATION + MULTIPLEOUTPUT
+Joining + Combination + MultipleOutput  
 **#Copy input from local directory**  
 - *bin/hdfs dfs -put /home/rabiul/Desktop/GoavaTestPro/input /user/hduser/input*
 - *bin/hdfs dfs -put /home/rabiul/Desktop/GoavaTestPro/json-20180813.jar /user/hduser // for run time use of json.org.* *
