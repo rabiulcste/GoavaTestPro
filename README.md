@@ -49,13 +49,13 @@ bin/hdfs dfs -put /home/rabiul/Desktop/GoavaTestPro/json-20180813.jar /user/hdus
 bin/hadoop jar /home/rabiul/Desktop/GoavaTestPro/compaccountsj.jar CompAccounts initoutput finoutput
 
 
-This is a partial solve of the problem which fulfills -
+**_This is a partial solve of the problem which fulfills -_**
 1. Related​ ​ accounts​ ​ data​ ​ represented​ ​ as​ ​ an​ ​ array​ ​ property​ ​ inside company​ ​ object.
 2. Property​ ​ names​ ​ for​ ​ the​ ​ json​ ​ files​​ converted​ ​ to​ ​ lowercase.
 3. If​ ​ any​ ​ value​ ​ for​ ​ the​ ​ property​ ​ does​ ​ not​ ​ exist​ ​ in​ ​ the​ ​ csv​ ​ file​ ​ the​ ​ property​ ​ key​ ​ does​ ​not​ ​ exist​ ​ in​ ​ json​ ​ file.​
 4. In​ ​ the​ ​ output​ ​ ​ file​ ​ ORG_NUMBER​ ​ property​ replaced​ ​ with​ ​ “orgno”.
 5. “ORG_NUMBER”​ ​ property​​ removed​ ​ from​​ objects​ ​ in​ ​ “accounts”​ ​ array property​ ​ of​ ​ the​ ​ company​ ​ object.
 
-Failed to solve -
+**_Failed to solve -_**
 1. Multiple Outputs of .json files. It generates all json obejcts into a single .txt file. Failed to maintain identation as of regular json object. 
 2. Orders​ ​ of​ ​ the​ ​ columns​ ​ in​ ​ csv​ ​ file​​ ​ got shuffled ​ in output file.
