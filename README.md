@@ -35,7 +35,7 @@ Compile and Run
 **#Run JAR file**  
 */usr/local/hadoop$ bin/hadoop jar /home/rabiul/Desktop/GoavaTestPro/compaccountsj.jar CompAccounts initoutput finoutput*
 
-
+# Comments
 **_This is a partial solve of the problem which fulfills -_**
 1. Related accounts data represented as an array property inside company object.
 2. Property names for the json files converted to lowercase.
