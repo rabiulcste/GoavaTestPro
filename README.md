@@ -1,10 +1,10 @@
 Solution Sketch
 -------------------
-**First, left outer join of companies.csv with accounts.csv which produce output of companies property with separate accounts property.**  
+- First, left outer join of companies.csv with accounts.csv which produce output of companies property with separate accounts property.  
 
-**Second, combining same accounts property into a json array with each company object.**
+- Second, combining same accounts property into a json array with each company object.
 
-**Third, Generating Multiple outputs of each json object.**
+- Third, Generating Multiple outputs of each json object.
 
 - Joining (reducesidejoin) accounts properties with companies -> ReduceJoin.java
 - Related accounts data in an array property inside company object -> CompAccounts.java
@@ -39,7 +39,7 @@ Compile and Run
 **#Run JAR file**  
 - */usr/local/hadoop$ bin/hadoop jar /home/rabiul/Desktop/GoavaTestPro/compaccountsj.jar CompAccounts initoutput finoutput*
 
-# Multiple Output Part
+## Multiple Output Part
 **#Compile**  
 - */home/rabiul/Desktop/GoavaTestPro$ javac -classpath $HADOOP_HOME/share/hadoop/common/hadoop-common-2.9.0.jar:$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.9.0.jar:$HADOOP_HOME/share/hadoop/common/lib/commons-cli-1.2.jar:/home/rabiul/Desktop/json-20180813.jar -d /home/rabiul/Desktop/GoavaTestPro MultipleOutputsJson.java*
 
