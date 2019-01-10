@@ -37,5 +37,5 @@ Joining + Combination + MultipleOutput
 6. Multiple output generation as of <ORG_NUMBER>.
 
 **_Failed to solve -_**
-1. Failed to maintain identation of regular json object. 
+1. Generated .txt file instead of .json. Failed to maintain identation of regular json object. 
 2. Orders of the columns in csv files got shuffled in final output .txt file.
