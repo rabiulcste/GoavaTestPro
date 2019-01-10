@@ -1,6 +1,6 @@
 Solution Sketch
 -------------------
-First, left outer join of companies.csv with accounts.csv which produce output of companies property with separate accounts property. 
+**First, left outer join of companies.csv with accounts.csv which produce output of companies property with separate accounts property.** 
 
 #### Sample Output [join]  
 3023562238,"Mejer\, Dennis Grönnegaard",,2101,Skogsägare,	
@@ -12,7 +12,7 @@ First, left outer join of companies.csv with accounts.csv which produce output o
 5164060062,Holmen Holding AB,,64202,Holdingföretag i icke-finansiella koncerner,	2015-01-01,2015-12-31,28.66,9372
 5164060062,Holmen Holding AB,,64202,Holdingföretag i icke-finansiella koncerner,	2016-01-01,2016-12-31,0.0,0
 
-Second, combining same accounts property into a json array with company object.
+**Second, combining same accounts property into a json array with company object.**
 
 #### Sample Output [combine]  
 
@@ -46,7 +46,7 @@ bin/hdfs dfs -put /home/rabiul/Desktop/GoavaTestPro/json-20180813.jar /user/hdus
 /home/rabiul/Desktop/GoavaTestPro$ jar -cvf compaccountsj.jar -C /home/rabiul/Desktop/GoavaTestPro/compaccountsc .
 
 **#Run JAR file**  
-bin/hadoop jar /home/rabiul/Desktop/GoavaTestPro/compaccountsj.jar CompAccounts initoutput finoutput
+*/usr/local/hadoop$* bin/hadoop jar /home/rabiul/Desktop/GoavaTestPro/compaccountsj.jar CompAccounts initoutput finoutput
 
 
 **_This is a partial solve of the problem which fulfills -_**
