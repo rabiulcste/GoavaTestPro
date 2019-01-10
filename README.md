@@ -44,5 +44,5 @@ Compile and Run
 5. “ORG_NUMBER” property removed from objects in “accounts” array property of the company object.
 
 **_Failed to solve -_**
-1. Multiple Outputs of .json files. It generates all json obejcts into a single .txt file. Failed to maintain identation as of regular json object. 
+1. Multiple Outputs of .json files. This solution generates all json obejcts into a single .txt file. Failed to maintain identation as of regular json object. 
 2. Orders of the columns in csv file got shuffled in output file.
