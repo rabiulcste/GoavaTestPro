@@ -23,7 +23,7 @@ Joining + Combination + MultipleOutput
 - */home/rabiul/Desktop/GoavaTestPro$ jar -cvf **<path/to/jar/file>** -C **<path/to/classfiles/dir>** .*
 
 **#Run JAR file**  
-- */usr/local/hadoop$ bin/hadoop jar **<path/to/jar/file> <Program/Name> Input Output>***
+- */usr/local/hadoop$ bin/hadoop jar **<path/to/jar/file> <Program/Name> Input Output***
 
 
 
