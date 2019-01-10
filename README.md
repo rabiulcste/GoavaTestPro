@@ -1,17 +1,6 @@
 Solution Sketch
 -------------------
 **First, left outer join of companies.csv with accounts.csv which produce output of companies property with separate accounts property.** 
-
-#### Sample Output [join]  
-3023562238,"Mejer\, Dennis Grönnegaard",,2101,Skogsägare,  
-3023704301,"Andersen\, Svend Börje",,41200,Entreprenörer för bostadshus och andra byggnader,	 
-3023704780,"Kolodziej\, Jozef",,9,Huvudnäring okänd,	 
-4212062329,Ulla Christina Sernald Arnell,,70220,Konsultbyråer avseende företags organisation,	 
-5020688627,Brother Sewing Machines Europe GMBH,,9,Huvudnäring okänd,	 
-5020688668,Tigercat Industries Inc,,9,Huvudnäring okänd,	 
-5164060062,Holmen Holding AB,,64202,Holdingföretag i icke-finansiella koncerner,	2015-01-01,2015-12-31,28.66,9372 
-5164060062,Holmen Holding AB,,64202,Holdingföretag i icke-finansiella koncerner,	2016-01-01,2016-12-31,0.0,0 
-
 **Second, combining same accounts property into a json array with company object.**
 
 #### Sample Output [combine]  
@@ -50,12 +39,12 @@ Compile and Run
 
 
 **_This is a partial solve of the problem which fulfills -_**
-1. Related​ ​ accounts​ ​ data​ ​ represented​ ​ as​ ​ an​ ​ array​ ​ property​ ​ inside company​ ​ object.
-2. Property​ ​ names​ ​ for​ ​ the​ ​ json​ ​ files​​ converted​ ​ to​ ​ lowercase.
-3. If​ ​ any​ ​ value​ ​ for​ ​ the​ ​ property​ ​ does​ ​ not​ ​ exist​ ​ in​ ​ the​ ​ csv​ ​ file​ ​ the​ ​ property​ ​ key​ ​ does​ ​not​ ​ exist​ ​ in​ ​ json​ ​ file.​
-4. In​ ​ the​ ​ output​ ​ ​ file​ ​ ORG_NUMBER​ ​ property​ replaced​ ​ with​ ​ “orgno”.
-5. “ORG_NUMBER”​ ​ property​​ removed​ ​ from​​ objects​ ​ in​ ​ “accounts”​ ​ array property​ ​ of​ ​ the​ ​ company​ ​ object.
+1. Related accounts data represented as an array property inside company object.
+2. Property names for the json files converted to lowercase.
+3. If any value for the property does not exist in the csv file the property key does not exist in json file.
+4. In the output file ORG_NUMBER property replaced with “orgno”.
+5. “ORG_NUMBER” property removed from objects in “accounts” array property of the company object.
 
 **_Failed to solve -_**
 1. Multiple Outputs of .json files. It generates all json obejcts into a single .txt file. Failed to maintain identation as of regular json object. 
-2. Orders​ ​ of​ ​ the​ ​ columns​ ​ in​ ​ csv​ ​ file​​ ​ got shuffled ​ in output file.
+2. Orders of the columns in csv file got shuffled in output file.
