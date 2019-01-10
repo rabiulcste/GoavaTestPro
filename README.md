@@ -1,7 +1,7 @@
 Solution Sketch
 -------------------
 **First, left outer join of companies.csv with accounts.csv which produce output of companies property with separate accounts property.**  
-**Second, combining same accounts property into a json array with company object.**
+**Second, combining same accounts property into a json array with each company object.**
 
 - Joining (reducesidejoin) accounts properties with companies -> ReduceJoin.java
 - Related accounts data in an array property inside company object -> CompAccounts.java
